@@ -11,7 +11,7 @@ from pyrogram import filters
 
 import config
 from ANNIEMUSIC import app
-from ANNIEMUSIC.misc import HAPP, XCB
+from ANNIEMUSIC.misc import HAPP, SUDOERS, XCB
 from ANNIEMUSIC.utils.database import (
     get_active_chats,
     remove_active_chat,
@@ -22,7 +22,6 @@ from ANNIEMUSIC.utils.pastebin import ANNIEBIN
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-SUDOERS = "6755508094"
 
 async def is_heroku():
     return "heroku" in socket.getfqdn()
