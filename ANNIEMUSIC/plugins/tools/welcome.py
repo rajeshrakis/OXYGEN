@@ -69,14 +69,14 @@ def welcomepic(pic, user, chatname, id, uname):
     background = Image.open("ANNIEMUSIC/assets/annie/AnnieNwel.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
-    pfp = pfp.resize((835, 839))
+    pfp = pfp.resize((825, 824))
     draw = ImageDraw.Draw(background)
-    font_large = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=65)
+    font_large = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=110)
     font_small = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=60)
     draw.text((421, 715), f'{user}', fill=(242, 242, 242), font=font_large)
-    draw.text((270, 1005), f'{id}', fill=(242, 242, 242), font=font_large)
+    draw.text((2100, 1420), f'{id}', fill=(242, 242, 242), font=font_large)
     draw.text((570, 1308), f"{uname}", fill=(242, 242, 242), font=font_large)
-    pfp_position = (1887, 390)
+    pfp_position = (1990, 435)
     background.paste(pfp, pfp_position, pfp)
     background.save(f"downloads/welcome#{id}.png")
     return f"downloads/welcome#{id}.png"
@@ -149,15 +149,23 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 member.chat.id,
                 photo=welcomeimg,
                 caption=f"""
-**❅────✦ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ✦────❅
+❥︎─♡︎𝖂𝖊𝖑𝖈𝖔𝖒𝖊𝖘 𝖄𝖔𝖚♡︎─❦︎
+
 {member.chat.title}
-▰▰▰▰▰▰▰▰▰▰▰▰▰
-➻ Nᴀᴍᴇ ✧ {user.mention}
-➻ Iᴅ ✧ {user.id}
-➻ Usᴇʀɴᴀᴍᴇ ✧ @{user.username}
-➻ Tᴏᴛᴀʟ Mᴇᴍʙᴇʀs ✧ {count}
-▰▰▰▰▰▰▰▰▰▰▰▰▰**
-**❅─────✧❅✦❅✧─────❅**
+
+❦︎ . * ● ° ꨄ︎ ¸ . ❦︎　° :. ꨄ︎ * • ○ ° ❦︎
+
+💕 𝐍αмє 🦋 {user.mention}
+
+💕 𝐔ѕєя𝐈∂ 🦋 {user.id}
+
+💕 𝐔ѕєя𝐍αмє 🦋 @{user.username}
+
+💕 𝐓σтαℓ𝐌ємвєяѕ 🦋 {count}
+
+❦︎ . * ● ° ꨄ︎ ¸ . ❦︎　° :. ꨄ︎ * • ○ ° ❦︎
+
+❥︎─♡︎𝕰𝖓𝖏𝖔𝖞 𝕿𝖍𝖊 𝕯𝖗𝖚𝖌𝖟♡︎─❦︎
 """,
              reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton(button_text, url=deep_link)],
