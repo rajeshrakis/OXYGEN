@@ -58,7 +58,7 @@ async def start_pm(client, message: Message, _):
             keyboard = help_pannel(_)
             sticker_message = await message.reply_sticker(sticker=random.choice(STICKERS))
             asyncio.create_task(delete_sticker_after_delay(sticker_message, 2))  # Delete sticker after 2 seconds
-            await message.reply_video(
+            await message.reply_photo(
                 random.choice(ANNIE_PICS),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
@@ -114,7 +114,7 @@ async def start_pm(client, message: Message, _):
         served_chats = len(await get_served_chats())
         served_users = len(await get_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
-        await message.reply_video(
+        await message.reply_photo(
             random.choice(ANNIE_PICS),
             caption=random.choice(AMOP).format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM, served_users, served_chats),
             reply_markup=InlineKeyboardMarkup(out),
@@ -130,7 +130,7 @@ async def start_pm(client, message: Message, _):
 async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
-    await message.reply_video(
+    await message.reply_photo(
         random.choice(ANNIE_PICS),
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
@@ -164,7 +164,7 @@ async def welcome(client, message: Message):
                     return await app.leave_chat(message.chat.id)
 
                 out = start_panel(_)
-                await message.reply_video(
+                await message.reply_photo(
                     random.choice(ANNIE_PICS),
                     caption=_["start_3"].format(
                         message.from_user.mention,
