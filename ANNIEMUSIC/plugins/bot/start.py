@@ -27,7 +27,7 @@ from ANNIEMUSIC.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS, AMOP
 from strings import get_string
 
-ANNIE_VID = [
+ANNIE_PICS = [
     "https://graph.org/file/ffdb1be822436121cf5fd.png",
     "https://graph.org/file/f21bcb4b8b9c421409b64.png",
     "https://graph.org/file/ffdb1be822436121cf5fd.png",
@@ -59,7 +59,7 @@ async def start_pm(client, message: Message, _):
             sticker_message = await message.reply_sticker(sticker=random.choice(STICKERS))
             asyncio.create_task(delete_sticker_after_delay(sticker_message, 2))  # Delete sticker after 2 seconds
             await message.reply_video(
-                random.choice(ANNIE_VID),
+                random.choice(ANNIE_PICS),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
             )
@@ -115,7 +115,7 @@ async def start_pm(client, message: Message, _):
         served_users = len(await get_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_video(
-            random.choice(ANNIE_VID),
+            random.choice(ANNIE_PICS),
             caption=random.choice(AMOP).format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM, served_users, served_chats),
             reply_markup=InlineKeyboardMarkup(out),
         )
@@ -131,7 +131,7 @@ async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
     await message.reply_video(
-        random.choice(ANNIE_VID),
+        random.choice(ANNIE_PICS),
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
     )
@@ -165,7 +165,7 @@ async def welcome(client, message: Message):
 
                 out = start_panel(_)
                 await message.reply_video(
-                    random.choice(ANNIE_VID),
+                    random.choice(ANNIE_PICS),
                     caption=_["start_3"].format(
                         message.from_user.mention,
                         app.mention,
