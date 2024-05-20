@@ -80,24 +80,24 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     background.paste(pfp, pfp_position, pfp)
 
      # Calculate circular outline coordinates
-    center_x = pfp_position[0] + pfp.width / 2
-    center_y = pfp_position[1] + pfp.height / 2
-    radius = min(pfp.width, pfp.height) / 2
+  #  center_x = pfp_position[0] + pfp.width / 2
+  #  center_y = pfp_position[1] + pfp.height / 2
+  #  radius = min(pfp.width, pfp.height) / 2
 
     # Draw circular outlines
-    draw.ellipse([(center_x - radius - 10, center_y - radius - 10),
-                  (center_x + radius + 10, center_y + radius + 10)],
-                 outline=(255, 153, 51), width=25)  # Saffron border
+ #   draw.ellipse([(center_x - radius - 10, center_y - radius - 10),
+ #                (center_x + radius + 10, center_y + radius + 10)],
+ #                outline=(255, 153, 51), width=25)  # Saffron border
 
-    draw.ellipse([(center_x - radius - 20, center_y - radius - 20),
-                  (center_x + radius + 20, center_y + radius + 20)],
-                 outline=(255, 255, 255), width=25)  # White border
+  #  draw.ellipse([(center_x - radius - 20, center_y - radius - 20),
+  #                (center_x + radius + 20, center_y + radius + 20)],
+  #                outline=(255, 255, 255), width=25)  # White border
 
-    draw.ellipse([(center_x - radius - 30, center_y - radius - 30),
-                  (center_x + radius + 30, center_y + radius + 30)],
-                 outline=(0, 128, 0), width=25)  # Green border
-    background.save(f"downloads/welcome#{id}.png")
-    return f"downloads/welcome#{id}.png"
+  #  draw.ellipse([(center_x - radius - 30, center_y - radius - 30),
+  #                (center_x + radius + 30, center_y + radius + 30)],
+  #                outline=(0, 128, 0), width=25)  # Green border
+  #  background.save(f"downloads/welcome#{id}.png")
+  #  return f"downloads/welcome#{id}.png"
 
 
 
