@@ -7,15 +7,44 @@ from ANNIEMUSIC.utils.database import get_served_chats
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-MESSAGE = f"""**๏ ᴛʜɪs ɪs ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs + ᴄʜᴀɴɴᴇʟs ᴠᴄ. 💌
+MESSAGE = f"""**
+@{app.username}
+ 𝐈ѕ α 𝐒мαят 𝐏яσ ⚡️ 𝐌υѕιᴄ 𝐁σт 🦋
 
-🎧 ᴘʟᴀʏ + ᴠᴘʟᴀʏ + ᴄᴘʟᴀʏ 🎧
+❦︎ . * ● ° ꨄ︎ ¸ . ❦︎　° :. ꨄ︎ * • ○ ° ❦︎
 
-➥ sᴜᴘᴘᴏʀᴛᴇᴅ ᴡᴇʟᴄᴏᴍᴇ - ʟᴇғᴛ ɴᴏᴛɪᴄᴇ, ᴛᴀɢᴀʟʟ, ᴠᴄᴛᴀɢ, ʙᴀɴ - ᴍᴜᴛᴇ, sʜᴀʏʀɪ, ʟʏʀɪᴄs, sᴏɴɢ - ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅ, ᴇᴛᴄ... 💕
+💕 𝐏яσ 𝐅єαтυяєѕ 🦋
 
-🔐ᴜꜱᴇ » [/start](https://t.me/{app.username}?start=help) ᴛᴏ ᴄʜᴇᴄᴋ ʙᴏᴛ
+♫︎🌹 𝐅υη 𝐓αgѕ 🥂
+♫︎🌹 𝐖єʟᴄσмє 𝐆яєєтιηg 💐
+♫︎🌹 𝐋єƒт 𝐍σтє 🍾
+♫︎🌹 𝐕ᴄ 𝐈ηνιтє 𝐂αя∂ 🎉
+♫︎🌹 𝐕ι∂єσ 𝐃σωηʟσα∂ 📹 
+♫︎🌹 𝐀υ∂ισ 𝐃σωηʟσα∂ 🎶
 
-➲ ʙᴏᴛ :** @{app.username}"""
+♫︎🌹 𝐒υρρσят 𝐋ινє 𝐒тяєαм αη∂ 𝐘συтυвє 𝐒тяєαмѕ 🥳 
+♫︎🌹 𝐌σνιє & 𝐕ι∂єσ 𝐒тяєαмιηg 24x7 💝
+
+❦︎ . * ● ° ꨄ︎ ¸ . ❦︎　° :. ꨄ︎ * • ○ ° ❦︎
+
+♫︎🏓 𝐏ʟαу + 𝐕ρʟαу + 𝐒тяєαм
+
+♫︎🏓 𝐓αgαʟʟ + 𝐌єηтιση + 𝐆мтαg
+     ( /tagall /mention /gmtag )
+♫︎🏓 𝐆ηтαg + 𝐕ᴄтαg + 𝐋σνєтαg
+     ( /gmtag /vctag /lovetag )
+♫︎🏓 𝐒ιηgʟє + 𝐇єαятвєαт + 𝐇σηєумσση
+     ( /single /heartbeat /honeymoon )
+♫︎🏓 𝐂συρʟєѕ + 𝐓αмιʟтαg
+     ( /couples /tamiltag )
+
+❦︎ . * ● ° ꨄ︎ ¸ . ❦︎　° :. ꨄ︎ * • ○ ° ❦︎
+
+💕 𝐍єтωσяк 🦋
+[𝅗ـﮩ٨ـ𝅽𝅾𓆩𝞖𝘌𝘈𝘙𝘛𝂬♡𝂬𝞑𝘌𝘈𝘛▹ᴴᴮ⸳⸳ⷮ⸳⸳ⷨ𓆪ﮩ٨ـ𝅽𝅾‐𝅘](https://t.me/HeartBeat_Muzic)
+
+❥︎─♡︎𝕰𝖓𝖏𝖔𝖞 𝕿𝖍𝖊 𝕯𝖗𝖚𝖌𝖟♡︎─❦︎
+"""
 
 BUTTON = InlineKeyboardMarkup(
     [
