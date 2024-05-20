@@ -73,9 +73,9 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     draw = ImageDraw.Draw(background)
     font_large = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=95)
     font_small = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=45)
-    draw.text((1820, 1080), f'{user}', fill=(242, 242, 242), font=font_large)
-    draw.text((1620, 1280), f'{id}', fill=(242, 242, 242), font=font_large)
-    draw.text((2000, 1510), f"{uname}", fill=(242, 242, 242), font=font_large)
+    draw.text((1820, 1080), f'{user}', fill=(201, 002, 002), font=font_large)
+    draw.text((1620, 1280), f'{id}', fill=(201, 002, 002), font=font_large)
+    draw.text((2000, 1510), f"{uname}", fill=(201, 002, 002), font=font_large)
     pfp_position = (265, 360)
     background.paste(pfp, pfp_position, pfp)
 
