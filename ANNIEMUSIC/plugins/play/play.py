@@ -172,7 +172,7 @@ async def play_commnd(
                 else:
                     plist_id = url.split("=")[1]
                 img = config.PLAYLIST_IMG_URL
-                cap = _["play_10"]
+                cap = _["stream_1"]
             elif "https://youtu.be" in url:
                 videoid = url.split("/")[-1].split("?")[0]
                 details, track_id = await YouTube.track(f"https://www.youtube.com/watch?v={videoid}")
@@ -191,7 +191,7 @@ async def play_commnd(
                         details, track_id = await YouTube.track(video_url)
                         streamtype = "playlist"
                         img = details["thumb"]
-                        cap = _["play_10"].format(details["title"], details["duration_min"])
+                        cap = _["stream_1"].format(details["title"], details["duration_min"])
                         await queue_video_for_playback(video_url, details, track_id, streamtype, img, cap)
 
                     await mystic.edit_text("All videos from the channel have been added to the queue.")
@@ -205,7 +205,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
                 img = details["thumb"]
-                cap = _["play_10"].format(
+                cap = _["stream_1"].format(
                     details["title"],
                     details["duration_min"],
                 )
@@ -222,7 +222,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
                 img = details["thumb"]
-                cap = _["play_10"].format(details["title"], details["duration_min"])
+                cap = _["stream_1"].format(details["title"], details["duration_min"])
             elif "playlist" in url:
                 try:
                     details, plist_id = await Spotify.playlist(url)
@@ -260,7 +260,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
                 img = details["thumb"]
-                cap = _["play_10"].format(details["title"], details["duration_min"])
+                cap = _["stream_1"].format(details["title"], details["duration_min"])
             elif "playlist" in url:
                 spotify = True
                 try:
@@ -280,7 +280,7 @@ async def play_commnd(
                 return await mystic.edit_text(_["play_3"])
             streamtype = "youtube"
             img = details["thumb"]
-            cap = _["play_10"].format(details["title"], details["duration_min"])
+            cap = _["stream_1"].format(details["title"], details["duration_min"])
         elif await SoundCloud.valid(url):
             try:
                 details, track_path = await SoundCloud.download(url)
@@ -433,7 +433,7 @@ async def play_commnd(
                 await mystic.delete()
                 await message.reply_photo(
                     photo=details["thumb"],
-                    caption=_["play_10"].format(
+                    caption=_["stream_1"].format(
                         details["title"].title(),
                         details["duration_min"],
                     ),
@@ -657,7 +657,7 @@ async def slider_queries(client, CallbackQuery, _):
         buttons = slider_markup(_, vidid, user_id, query, query_type, cplay, fplay)
         med = InputMediaPhoto(
             media=thumbnail,
-            caption=_["play_10"].format(
+            caption=_["stream_1"].format(
                 title.title(),
                 duration_min,
             ),
@@ -678,7 +678,7 @@ async def slider_queries(client, CallbackQuery, _):
         buttons = slider_markup(_, vidid, user_id, query, query_type, cplay, fplay)
         med = InputMediaPhoto(
             media=thumbnail,
-            caption=_["play_10"].format(
+            caption=_["stream_1"].format(
                 title.title(),
                 duration_min,
             ),
