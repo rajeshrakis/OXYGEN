@@ -65,25 +65,46 @@ def circle(pfp, size=(500, 500)):
     pfp.putalpha(mask)
     return pfp
 
-def welcomepic(pic, user, chatname, id, uname):
+def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     background = Image.open("ANNIEMUSIC/assets/annie/AnnieNwel.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
-    pfp = pfp.resize((825, 824))
+    pfp = pfp.resize((892, 880))
     draw = ImageDraw.Draw(background)
-    font_large = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=110)
-    font_small = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=60)
-    draw.text((1977, 1136), f'{user}', fill=(242, 242, 242), font=font_large)
-    draw.text((2003, 1340), f'{id}', fill=(242, 242, 242), font=font_large)
-    draw.text((1994, 1577), f"{uname}", fill=(242, 242, 242), font=font_large)
-    pfp_position = (713, 799)
+    font_large = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=95)
+    font_small = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=45)
+    draw.text((1820, 1080), f'{user}', fill=(242, 242, 242), font=font_large)
+    draw.text((1620, 1280), f'{id}', fill=(242, 242, 242), font=font_large)
+    draw.text((2000, 1510), f"{uname}", fill=(242, 242, 242), font=font_large)
+    pfp_position = (265, 360)
     background.paste(pfp, pfp_position, pfp)
+
+     # Calculate circular outline coordinates
+    center_x = pfp_position[0] + pfp.width / 2
+    center_y = pfp_position[1] + pfp.height / 2
+    radius = min(pfp.width, pfp.height) / 2
+
+    # Draw circular outlines
+    draw.ellipse([(center_x - radius - 10, center_y - radius - 10),
+                  (center_x + radius + 10, center_y + radius + 10)],
+                 outline=(255, 153, 51), width=25)  # Saffron border
+
+    draw.ellipse([(center_x - radius - 20, center_y - radius - 20),
+                  (center_x + radius + 20, center_y + radius + 20)],
+                 outline=(255, 255, 255), width=25)  # White border
+
+    draw.ellipse([(center_x - radius - 30, center_y - radius - 30),
+                  (center_x + radius + 30, center_y + radius + 30)],
+                 outline=(0, 128, 0), width=25)  # Green border
     background.save(f"downloads/welcome#{id}.png")
     return f"downloads/welcome#{id}.png"
 
+
+
+
 @app.on_message(filters.command("wel") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**Usage:**\n⦿/wel [on|off]\n➤ANNIE SPECIAL WELCOME.........."
+    usage = "**Usage:**\n**⦿/wel [on|off]\n**"
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
