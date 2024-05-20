@@ -69,7 +69,7 @@ def welcomepic(pic, user, chatname, id, uname):
     background = Image.open("ANNIEMUSIC/assets/annie/AnnieNwel.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
-    pfp = pfp.resize((825, 824))
+    pfp = pfp.resize((892, 880))
     draw = ImageDraw.Draw(background)
     font_large = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=110)
     font_small = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=60)
