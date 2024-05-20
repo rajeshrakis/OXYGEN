@@ -76,7 +76,7 @@ def welcomepic(pic, user, chatname, id, uname):
     draw.text((1977, 1136), f'{user}', fill=(242, 242, 242), font=font_large)
     draw.text((2003, 1340), f'{id}', fill=(242, 242, 242), font=font_large)
     draw.text((1994, 1577), f"{uname}", fill=(242, 242, 242), font=font_large)
-    pfp_position = (713, 799, 411)
+    pfp_position = (713, 799)
     background.paste(pfp, pfp_position, pfp)
     background.save(f"downloads/welcome#{id}.png")
     return f"downloads/welcome#{id}.png"
