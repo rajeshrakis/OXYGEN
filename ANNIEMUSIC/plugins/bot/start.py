@@ -28,9 +28,7 @@ from config import BANNED_USERS, AMOP
 from strings import get_string
 
 ANNIE_PICS = [
-    "https://graph.org/file/ffdb1be822436121cf5fd.png",
     "https://graph.org/file/f21bcb4b8b9c421409b64.png",
-    "https://graph.org/file/ffdb1be822436121cf5fd.png",
     "https://telegra.ph/file/e5aaa494015bccbe1ec85.jpg",
     "https://telegra.ph/file/96ae3ac077b1a52a9d104.jpg",
     "https://telegra.ph/file/c8e4527447d74a7f9742f.jpg"
