@@ -28,6 +28,7 @@ MESSAGE = f"""**
 ❦︎ . * ● ° ꨄ︎ ¸ . ❦︎　° :. ꨄ︎ * • ○ ° ❦︎
 
 ♫︎🏓 𝐏ʟαу + 𝐕ρʟαу + 𝐒тяєαм
+    ( /play /vplay /stream )
 
 ♫︎🏓 𝐓αgαʟʟ + 𝐌єηтιση + 𝐆мтαg
      ( /tagall /mention /gmtag )
