@@ -14,7 +14,7 @@ async def brah2(_, msg):
 # invite members on vc
 @app.on_message(filters.video_chat_members_invited)
 async def brah3(app :app, message:Message):
-           text = f"{message.from_user.mention} ɪɴᴠɪᴛᴇᴅ "
+           text = f"{message.from_user.mention} \n\n💕𝐁яιуαηι 𝐕αηgι 𝐓нαяєη 𝐕α 🦋\n\n "
            x = 0
            for user in message.video_chat_members_invited.users:
              try:
