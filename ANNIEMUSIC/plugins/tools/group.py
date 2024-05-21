@@ -7,35 +7,35 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 # vc on
 @app.on_message(filters.video_chat_started)
 async def brah(_, msg):
-       await msg.reply("ᴠᴏɪᴄᴇ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ")
+    await msg.reply("**𝑉𝑎𝑛𝑡ℎ𝑢 𝐾𝑎𝑑ℎ𝑎𝑙 𝑃𝑎𝑛𝑛𝑢𝑛𝑔𝑎 𝑉𝑐 𝐿𝑎 𝐷𝑜𝑙𝑖 & 𝐷𝑜𝑙𝑎𝑛𝑠 🫶🏻🫴🏻🤍**")
 
 # vc off
 @app.on_message(filters.video_chat_ended)
 async def brah2(_, msg):
-       await msg.reply("**ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴇɴᴅᴇᴅ**")
+    await msg.reply("**🤧💫 𝑉𝑐 𝐸𝑣𝑎𝑛𝑑𝑎 𝐸𝑛𝑑 𝑃𝑎𝑛𝑛𝑢𝑛𝑎𝑡ℎ𝑢 🥹🤌🏻**")
 
 # invite members on vc
 @app.on_message(filters.video_chat_members_invited)
-async def brah3(app :app, message:Message):
-           text = f"{message.from_user.mention} ɪɴᴠɪᴛᴇᴅ "
+async def brah3(app: app, message: Message):
+           text = f"*💕 {message.from_user.mention}\n\n**𝑉𝑐 𝑉𝑎 𝑃𝑎𝑛𝑔𝑢𝑢𝑢 🫀🫂💙**\n\n**💕 **"
            x = 0
            for user in message.video_chat_members_invited.users:
-             try:
-               text += f"[{user.first_name}](tg://user?id={user.id}) "
-               x += 1
-             except Exception:
-               pass
+            try:
+             text += f"[{user.first_name}](tg://user?id={user.id}) "
+            x += 1
+        except Exception:
+            pass
 
-           try:
-             invite_link = await app.export_chat_invite_link(message.chat.id)
-             add_link = f"https://t.me/{app.username}?startgroup=true"
-             reply_text = f"{text} 🤭🤭"
+    try:
+        invite_link = await app.export_chat_invite_link(message.chat.id)
+        add_link = f"https://t.me/{app.username}?startgroup=true"
+        reply_text = f"{text} 🤭🤭"
 
-           await message.reply(reply_text, reply_markup=InlineKeyboardMarkup([
-             [InlineKeyboardButton(text= "🐣 𝑉𝑐 𝐿𝑎 𝐽𝑜𝑖𝑛 𝐴𝑔𝑢𝑑𝑎 𝑆𝑖𝑙𝑢𝑘𝑢 🦋", url=add_link)],
-             ]))
-           except Exception as e:
-             print(f"Error: {e}")
+        await message.reply(reply_text, reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton(text= "🐣 𝑉𝑐 𝐿𝑎 𝐽𝑜𝑖𝑛 𝐴𝑔𝑢𝑑𝑎 𝑆𝑖𝑙𝑢𝑘𝑢 🦋", url=add_link)],
+        ]))
+    except Exception as e:
+        print(f"Error: {e}")
 
 
 ####
@@ -49,17 +49,6 @@ def calculate_math(client, message):
     except:
         response = "ɪɴᴠᴀʟɪᴅ ᴇxᴘʀᴇssɪᴏɴ"
     message.reply(response)
-
-###
-@app.on_message(filters.command("leavegroup")& filters.user(OWNER_ID))
-async def bot_leave(_, message):
-    chat_id = message.chat.id
-    text = f"sᴜᴄᴄᴇssғᴜʟʟʏ   ʟᴇғᴛ  !!."
-    await message.reply_text(text)
-    await app.leave_chat(chat_id=chat_id, delete=True)
-
-
-####
 
 
 @app.on_message(filters.command(["spg"], ["/", "!", "."]))
