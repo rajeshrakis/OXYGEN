@@ -8,7 +8,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 MESSAGE = f"""**
-@{app.username}
+[𝞖𝘌𝘈𝘙𝘛𝞑𝘌𝘈𝘛𝂬♡𝂬𝘿𝘙𝘜𝘎𝘡](https://t.me/{app.username})
  𝐈ѕ α 𝐒мαят 𝐏яσ ⚡️ 𝐌υѕιᴄ 𝐁σт 🦋
 
 ❦︎ . * ● ° ꨄ︎ ¸ . ❦︎　° :. ꨄ︎ * • ○ ° ❦︎
@@ -50,7 +50,7 @@ MESSAGE = f"""**
 BUTTON = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("๏ ᴋɪᴅɴᴀᴘ ᴍᴇ ๏", url=f"https://t.me/{app.username}?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users")
+            InlineKeyboardButton("💕 𝐄𝔫𝔫𝔞 𝐄𝔡𝔲𝔱𝔱𝔥𝔲𝔨𝔬 🦋", url=f"https://t.me/{app.username}?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users")
         ]
     ]
 )
