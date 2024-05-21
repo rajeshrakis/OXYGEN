@@ -185,7 +185,7 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
 def telegram_markup(_, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(text= "๏ ɴᴇxᴛ ๏", callback_data=f"PanelMarkup None|{chat_id}",),
+            InlineKeyboardButton(text= "💕 𝐍𝔢𝔵𝔱 🦋", callback_data=f"PanelMarkup None|{chat_id}",),
             InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
         ],
     ]
@@ -231,7 +231,7 @@ def panel_markup_1(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(text="💕 𝐇𝔬𝔪𝔢 🦋", callback_data=f"MainMarkup {videoid}|{chat_id}",),
-            InlineKeyboardButton(text="๏ ɴᴇxᴛ ๏", callback_data=f"Pages Forw|0|{videoid}|{chat_id}",),
+            InlineKeyboardButton(text="💕 𝐍𝔢𝔵𝔱 🦋", callback_data=f"Pages Forw|0|{videoid}|{chat_id}",),
         ],
     ]
     return buttons
