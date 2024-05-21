@@ -2,10 +2,13 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from ANNIEMUSIC import app
 from config import OWNER_ID
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
 # vc on
 @app.on_message(filters.video_chat_started)
 async def brah(_, msg):
        await msg.reply("ᴠᴏɪᴄᴇ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ")
+
 # vc off
 @app.on_message(filters.video_chat_ended)
 async def brah2(_, msg):
@@ -22,10 +25,17 @@ async def brah3(app :app, message:Message):
                x += 1
              except Exception:
                pass
+
            try:
-             await message.reply(f"{text} 😉")
-           except:
-             pass
+             invite_link = await app.export_chat_invite_link(message.chat.id)
+             add_link = f"https://t.me/{app.username}?startgroup=true"
+             reply_text = f"{text} 🤭🤭"
+
+           await message.reply(reply_text, reply_markup=InlineKeyboardMarkup([
+             [InlineKeyboardButton(text= "🐣 𝑉𝑐 𝐿𝑎 𝐽𝑜𝑖𝑛 𝐴𝑔𝑢𝑑𝑎 𝑆𝑖𝑙𝑢𝑘𝑢 🦋", url=add_link)],
+             ]))
+           except Exception as e:
+             print(f"Error: {e}")
 
 
 ####
