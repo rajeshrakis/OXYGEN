@@ -65,7 +65,7 @@ def circle(pfp, size=(500, 500)):
     pfp.putalpha(mask)
     return pfp
 
-def welcomepic(pic, user, chatname, id, self.name, brightness_factor=1.3):
+def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     background = Image.open("ANNIEMUSIC/assets/annie/AnnieNwel.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
@@ -75,7 +75,7 @@ def welcomepic(pic, user, chatname, id, self.name, brightness_factor=1.3):
     font_small = ImageFont.truetype('ANNIEMUSIC/assets/annie/ArialReg.ttf', size=125)
     draw.text((1820, 1080), f'{user}', fill=(201, 2, 2), font=font_large)
     draw.text((1620, 1280), f'{id}', fill=(201, 2, 2), font=font_large)
-    draw.text((2000, 1510), f'{self.name}', fill=(201, 2, 2), font=font_large)
+    draw.text((2000, 1510), f'{uname}', fill=(201, 2, 2), font=font_large)
     pfp_position = (270, 380)
     background.paste(pfp, pfp_position, pfp)
     background.save(f"downloads/welcome#{id}.png")
