@@ -15,7 +15,7 @@ def track_markup(_, user_id, channel, fplay):
         ],
         [
             InlineKeyboardButton(text="💕 𝐑𝔢𝔭𝔩𝔞𝔶 ↺ 🦋", callback_data=f"ADMIN Replay|{chat_id}"),
-            InlineKeyboardButton(text="▢ sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="💕 𝐒𝔱𝔬𝔭 ▢ 🦋", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
             InlineKeyboardButton(text="💕 𝐌𝔬𝔯𝔢 🦋", callback_data=f"PanelMarkup None|{chat_id}",),
@@ -61,7 +61,7 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="💕 𝐒𝔨𝔦𝔭 ‣‣I 🦋", callback_data=f"ADMIN Skip|{chat_id}"),
         ],
         [
-            InlineKeyboardButton(text="▢ sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="💕 𝐒𝔱𝔬𝔭 ▢ 🦋", callback_data=f"ADMIN Stop|{chat_id}"),
             InlineKeyboardButton(text="💕 𝐑𝔢𝔭𝔩𝔞𝔶 ↺ 🦋", callback_data=f"ADMIN Replay|{chat_id}"),
         ],
         [
@@ -107,7 +107,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="💕 𝐒𝔨𝔦𝔭 ‣‣I 🦋", callback_data=f"ADMIN Skip|{chat_id}"),
         ],
         [
-            InlineKeyboardButton(text="▢ sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="💕 𝐒𝔱𝔬𝔭 ▢ 🦋", callback_data=f"ADMIN Stop|{chat_id}"),
             InlineKeyboardButton(text="💕 𝐑𝔢𝔭𝔩𝔞𝔶 ↺ 🦋", callback_data=f"ADMIN Replay|{chat_id}"),
         ],
         [
@@ -127,7 +127,7 @@ def stream_markup(_, chat_id):
             
         ],
         [
-            InlineKeyboardButton(text="▢ sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="💕 𝐒𝔱𝔬𝔭 ▢ 🦋", callback_data=f"ADMIN Stop|{chat_id}"),
             InlineKeyboardButton(text="💕 𝐑𝔢𝔭𝔩𝔞𝔶 ↺ 🦋", callback_data=f"ADMIN Replay|{chat_id}"),
         ],
         [
@@ -199,7 +199,7 @@ def queue_markup(_, videoid, chat_id):
         
           [
             InlineKeyboardButton(text="💕 II 𝐏𝔞𝔲𝔰𝔢 🦋", callback_data=f"ADMIN Pause|{chat_id}",),
-            InlineKeyboardButton(text="▢ sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="💕 𝐒𝔱𝔬𝔭 ▢ 🦋", callback_data=f"ADMIN Stop|{chat_id}"),
             InlineKeyboardButton(text="💕 𝐒𝔨𝔦𝔭 ‣‣I 🦋", callback_data=f"ADMIN Skip|{chat_id}"),
         ],
         [
